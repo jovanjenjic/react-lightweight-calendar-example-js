@@ -1,9 +1,9 @@
 import React from "react";
 import CalendarComponent from "react-lightweight-calendar";
 import { data } from "./data";
-import CustomizationComponent from "./CustomizationComponent";
+import CustomizationComponent from "./CalendarHeader";
 import FormDialog from "./FormDialog";
-import './Calendar.css';
+import './Calendar.scss';
 
 function Calendar() {
   const [calendarData, setCalendarData] = React.useState(data);

@@ -29,9 +29,9 @@ const timeDateFields = [
   { value: 'endTimeDate', label: 'End time date' }, 
 ];
 
-const CustomizationComponent = ({ currentView, setCurrentView, setWeekStartsOn, setActiveTimeDateField }) => {
+const CalendarHeader = ({ currentView, setCurrentView, setWeekStartsOn, setActiveTimeDateField }) => {
   return (
-    <div className="view-navigation">
+    <div className="calendar-header">
       <FormControl sx={{ m: 1, minWidth: 160 }} size="small">
         <InputLabel id="demo-select-small-label">Views</InputLabel>
         <Select
@@ -78,4 +78,4 @@ const CustomizationComponent = ({ currentView, setCurrentView, setWeekStartsOn, 
   );
 }
 
-export default CustomizationComponent;
+export default CalendarHeader;

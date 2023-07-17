@@ -3,9 +3,10 @@
     position: relative;
 }
 
-.view-navigation {
+.calendar-header {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: end;
 }
 
