@@ -13,7 +13,8 @@
     "formik": "^2.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-lightweight-calendar": "^1.0.9",
+    "react-jovannn-calendar": "^0.0.1",
+    "react-lightweight-calendar": "^1.3.1",
     "react-scripts": "5.0.1",
     "yup": "^1.2.0"
   },
