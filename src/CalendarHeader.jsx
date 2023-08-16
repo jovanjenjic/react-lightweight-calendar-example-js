@@ -7,6 +7,7 @@ import Select from '@mui/material/Select';
 const views = [
   { value: 'WEEK_TIME', label: 'Week time' }, 
   { value: 'DAY', label: 'Day'}, 
+  { value: 'DAY_REVERSE', label: 'Day reverse'}, 
   { value: 'MONTH', label: 'Month' },
   { value: 'WEEK', label: 'Week' },
   { value: 'WEEK_IN_PLACE', label: 'Week in place' },
