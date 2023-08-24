@@ -28,6 +28,19 @@ function Calendar() {
     setCalendarData(prevData => [...prevData, newItem]);
   }
 
+  const onCellClick = (dateInfo) => {
+    const utcTimeDate = new Date(dateInfo.timeDateUTC);
+    const addedHour = new Date(utcTimeDate.setHours(utcTimeDate.getHours() + 1)).toISOString();
+      setOpen(true);
+      setSelectedItem({
+        title: null,
+        startTimeDate: dateInfo.timeDateUTC,
+        endTimeDate: addedHour,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      }) 
+  }
+
   return (
     <div className="calendar-wrapper">
       <CustomizationComponent 
@@ -47,18 +60,7 @@ function Calendar() {
             setOpen(true);
             setSelectedItem(item) 
         }}
-        onCellClick={(dateInfo) => {
-          const utcTimeDate = new Date(dateInfo.timeDateUTC);
-          const addedHour = new Date(utcTimeDate.setHours(utcTimeDate.getHours() + 1)).toISOString();
-            setOpen(true);
-            setSelectedItem({
-              title: null,
-              startTimeDate: dateInfo.timeDateUTC,
-              endTimeDate: addedHour,
-              createdAt: new Date().toISOString(),
-              updatedAt: new Date().toISOString(),
-            }) 
-        }}
+        onCellClick={onCellClick}
         onDayNumberClick={(val) => {
           setCurrentDate(val);
           setCurrentView('DAY');
